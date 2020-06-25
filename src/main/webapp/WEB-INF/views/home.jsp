@@ -7,6 +7,9 @@
 	<title>Home</title>
 </head>
 <body>
+<!-- 
+Spring-JDBC를 구현하기 위한 절차
+ -->
 	<h2>스프링 MVC 시작하기</h2>
 	
 	<h3>Spring 답변형 비회원제 게시판 제작</h3>
