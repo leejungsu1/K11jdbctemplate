@@ -126,6 +126,7 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency> 
+		
 		<!-- ojdbc6(오라클 드라이버) 의존설정 -->
 		<dependency> 
 			<groupId>com.oracle</groupId>
