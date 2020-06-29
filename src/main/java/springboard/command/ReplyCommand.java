@@ -4,14 +4,23 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-import model.JDBCTemplateDAO;
+import springboard.model.JDBCTemplateDAO;
 import springboard.model.SpringBbsDTO;
 
-@Service("BbsCommandImpl")
+@Service
 public class ReplyCommand implements BbsCommandImpl{
+	
+	JDBCTemplateDAO dao;
+	
+	@Autowired
+	public void setDao(JDBCTemplateDAO dao) {
+		this.dao = dao;
+		System.out.println("JDBCTemplateDAO 자동주입(Reply)");
+	}
 
 	@Override
 	public void execute(Model model) {
@@ -21,7 +30,7 @@ public class ReplyCommand implements BbsCommandImpl{
 		
 		String idx = req.getParameter("idx");
 		
-		JDBCTemplateDAO dao = new JDBCTemplateDAO();
+		//JDBCTemplateDAO dao = new JDBCTemplateDAO();
 		SpringBbsDTO dto = dao.view(idx);
 		/*
 		기존 게시물을 가져와서 제목과 내용부분에 아래와 같이

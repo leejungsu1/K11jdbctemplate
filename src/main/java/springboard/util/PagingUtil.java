@@ -47,9 +47,7 @@ public class PagingUtil {
 					pagingStr += "&nbsp;"+intTemp+"&nbsp;";
 				}
 				else {
-					pagingStr += "&nbsp;<a href='"+page
-						+"nowPage="+intTemp+"'>"+
-						intTemp+"</a>&nbsp;";
+					pagingStr += "&nbsp;<a href='"+page+"nowPage="+intTemp+"'>"+intTemp+"</a>&nbsp;";
 				}
 				intTemp++;
 				blockCount++;
